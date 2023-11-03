@@ -1,10 +1,15 @@
+import os
 import random
 from mastodon import Mastodon
 
-# Load Mastodon API credentials
+# Load Mastodon API credentials from environment variables
+access_token = os.getenv('ACCESS_TOKEN')
+api_base_url = "botsin.space"
+
+# Initialize Mastodon API
 mastodon = Mastodon(
-    access_token='your_access_token',
-    api_base_url='https://botsin.space'  # Replace with your instance
+    access_token=access_token,
+    api_base_url=api_base_url
 )
 
 # Read the lines from the text file
