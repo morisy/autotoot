@@ -4,7 +4,7 @@ from mastodon import Mastodon
 
 # Load Mastodon API credentials from environment variables
 access_token = os.getenv('ACCESS_TOKEN')
-api_base_url = "botsin.space"
+api_base_url = os.getenv('API_BASE_URL')
 
 # Initialize Mastodon API
 mastodon = Mastodon(
