@@ -2,8 +2,8 @@ name: Toot Scheduler
 
 on:
   schedule:
-    # Run this workflow every hour
-    - cron: '0 * * * *'
+    # Run this workflow every 10 minutes
+    - cron: '*/10 * * * *'
 
 jobs:
   toot:
